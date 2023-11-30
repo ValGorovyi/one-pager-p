@@ -31,6 +31,7 @@ html {
 .wrapper{
   max-width: 1004px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 body{
   font-family: poppins;
@@ -86,8 +87,31 @@ header{
 .header{
   transition: .5s linear;
   padding-bottom: 24px;
-  z-index: 999;
-
+  z-index: 10;
+}
+.header-burger{
+  width: 40px;
+  height: 20px;
+  position: relative;
+  display: none;
+}
+.burger-line{
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #f5eadf;
+  position: absolute;
+  left: 0;
+}
+.burger-line-1{
+  top: 0;
+}
+.burger-line-3{
+  bottom: 0;;
+}
+.burger-line-2{
+  top: 50%;
+  transform: translateY(-50%);
 }
 .header-link:hover, .header-link:focus{
   opacity: 75%;
@@ -98,6 +122,7 @@ header{
 .wrapper-full{
   max-width: 1008px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 .header-active{
   background: #313131;
@@ -107,7 +132,7 @@ header{
 /*intro*/
 .intro-section{
   min-height: 110vh;
-  background: url(../img/Background\ Image.png) 0 0/100% 100% no-repeat;
+  background: url(../img/min/Background\ Image-min.png) 0 0/100% 100% no-repeat;
   block-size: cover;
   padding-top: 130px;
 }
@@ -138,12 +163,12 @@ header{
 .intro-input{
   font-family: Poppins;
   background-color: transparent;
-  background: url(../img/Subtract.svg) no-repeat left 8px;
+  background: url(../img/Subtract.svg) no-repeat left 1px;
   background-size: 18px;
   border: 0;
   border-bottom: 2px solid #f5eadf;
   margin-right: 50px;
-  width: 200px;
+  width: 326px;
   padding-left: 22px;
   color: #f5eadf;
 }
@@ -191,7 +216,7 @@ header{
 .benefit-cards{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
+  column-gap: 10px;
   padding: 30px 100px;
 }
 .benefit-card{
@@ -285,7 +310,8 @@ a{
 .places-cards{
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
 }
 .places-figure-lg{
   height: 477px;
@@ -372,11 +398,11 @@ a{
 .tour{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0 108px;
+  column-gap: 0;
+  row-gap: 108px;
   align-items: center;
 }
 .tour-h3{
-  margin-bottom: 35px;
   font-family: Poppins;
   font-size: 28px;
   font-style: normal;
@@ -421,15 +447,17 @@ a{
 }
 .top-cards{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 50px;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 50px;
+  row-gap: 10px;
 
 }
 .card{
   position:relative;
-
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .top-statistic-img{
   position: absolute;
@@ -531,6 +559,7 @@ a{
 /* footer */
 .footer{
   background: #313131;
+  padding: 10px;
 }
 .footer-item{
   display: flex;
@@ -560,4 +589,203 @@ a{
 }
 .footer-a:hover, .footer-a:focus{
   opacity: 75%;
+}
+
+@media screen and (max-width: 940px){
+  .intro-input{
+    margin-bottom: 25px;
+  }
+  .benefit-cards{
+    padding: 0 15px;
+    column-gap: 35px;
+  }
+  .benefit-h3{
+    padding: 5px 15px;
+  }
+  .benefit-card{
+    margin-bottom: 25px;
+  }
+  .benefits-wrapper{
+    box-shadow: none;
+  }
+  .places-card-lg{
+    grid-column: span 6;
+  }
+  .places-card-sm{
+    grid-column: span 6;
+  }
+  .tour-info{
+    padding-left: 8px;
+  }
+  .tour-h3{
+    margin-bottom: 15px;
+  }
+  .tour-p{
+    margin-bottom: 15px;
+  }
+  .places{
+    margin-bottom: 40px;
+  }
+  .card{
+    grid-column: span 3;
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+  .intro-input{
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 778px) {
+  .header-burger{
+    display: block;
+  }
+  .header-nav{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #313131;
+    z-index: 10;
+    padding: 75px;
+    transform: translateX(100%);
+    transition: .5s all linear;
+  }
+  .header-nav-active{
+    transform: translateX(0);
+  }
+  .li-item{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .header-link{
+    font-size: 42px;
+    line-height: 48px;
+    margin-bottom: 30px;
+  }
+  .li-item:last-child{
+    margin-bottom: 0;
+  }
+  .header-nav-close{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0px;
+    width: 45pxpx;
+    z-index: 11;
+    right: -16px;
+  }
+  .header-nav-close-line{
+    display: block;
+    height: 2px;
+    background-color: #f5eadf;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 100%;
+  }
+  .header-nav-close-line:first-child{
+    transform: translateY(-50%) rotate(45deg)
+  }
+  .header-nav-close-line:last-child{
+    transform: translateY(-50%) rotate(-45deg)
+  }
+}
+
+@media screen and (max-width: 767px){
+  .benefit-card{
+    grid-column: span 3;
+    margin-bottom: 0;
+  }
+  .benefit-card:last-child .benefit-card-text{
+    margin-bottom: 8px;
+  }
+  .intro-h1{ 
+    width: auto
+  }
+  .intro-inputes{
+    margin-right: 0;
+    width: 100%;
+  }
+  .intro-h1{
+    font-size: 32px;
+  }
+  .intro-text{
+    font-size: 16px;
+  }
+  .header{
+    padding-bottom: 14px;
+    top: -39px;
+  }
+  .header-wrapper{
+    padding-top: 2px;
+  }
+  .header-img{
+    padding-top: 55px;
+  }
+  .section-title::after {
+    width: 210px;
+  }
+  .burger{
+    top: -15px;
+  }
+  .places-caption{
+    flex-direction: column;
+  }
+
+
+}
+
+@media screen and (max-width: 500px){
+  .header-nav{
+    padding: 75px 30px;
+  }
+  .intro-button{
+    width: 324px;
+  }
+  .benefit-card{
+    margin-bottom: 12px;
+  }
+  .benefit-ico{
+    margin-bottom: 10px;
+  }
+  .benefit-h3{
+    margin-bottom: 12px;
+  }
+  .benefit-a{
+    margin-bottom: 10px;
+  }
+  .places-figure{
+    height: 302px;
+  }
+  .tour{
+    row-gap: 30px;
+    margin-bottom: 76px;
+  }
+  .tour-div-img, .tour-info{
+    grid-column: span 2;
+  }
+  .tour-div-img-usa{
+    grid-row-start: -1;
+  }
+  .card{
+    grid-column: span 6;
+  }
+  .top-img{
+    margin-bottom: 10px;
+  }
+  .card-text{
+    margin-bottom: 8px;
+  }
+  .f-logo{
+    width: 100%;
+  }
+  .footer-nav{
+    flex-wrap: nowrap;
+  }
+  .footer-li{
+    margin: 6px;
+  }
+
 }

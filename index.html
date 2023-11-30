@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/Logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="./css/reser.css">
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./min-css/style.min.css">
   <title>Liquid Artistry</title>
 </head>
 <body>
@@ -13,16 +13,24 @@
     <div class="wrapper">
     <div class="header-wrapper">
 
-      <a href="/" class="logo"> <img fill-opacity='0' src="img/Logo.svg" alt="Liquid Artistry"></a>
+      <a href="/" class="logo header-logo"> <img class="header-img" fill-opacity='0' src="img/Logo.svg" alt="Liquid Artistry"></a>
 
-      <nav>
+      <nav class="header-nav">
           <ul class="ul-header">
-            <li class="li-item"> <a class="header-link" href="">Home</a></li>
-            <li class="li-item"> <a class="header-link" href="">Info</a></li>
-            <li class="li-item"> <a class="header-link" href="">More</a></li>
+            <li class="li-item"> <a class="header-link js-scroll" href="#sing-in">Sing in</a></li>
+            <li class="li-item"> <a class="header-link js-scroll" href="#info">Info</a></li>
+            <li class="li-item"> <a class="header-link js-scroll" href="#video">Video</a></li>
           </ul>
-
+          <div class="header-nav-close">
+            <span class="header-nav-close-line"></span>
+            <span class="header-nav-close-line"></span>
+          </div>
       </nav>
+      <div class="header-burger burger">
+        <span class="burger-line burger-line-1"></span>
+        <span class="burger-line burger-line-2"></span>
+        <span class="burger-line burger-line-3"></span>
+      </div>
       </div>
     </div>
   </header>
@@ -30,11 +38,11 @@
 
   <main class="main">
 
-    <section class="intro-section">
+    <section id="sing-in" class="intro-section">
       <div class="wrapper">
         <h1 class="intro-h1">Liquid Artistry</h1>
         <p class="intro-text">Step into a world of extraordinary flavors and unrivaled mixology expertise</p>
-        <form action="">
+        <form class="form">
           <fieldset>
             <p class="intro-inputes">
               <input name="Name" placeholder="Name" class="intro-input" type="text">
@@ -102,7 +110,7 @@
           
           <div class="places-card places-card-lg">
             <figure class="places-figure places-figure-lg">
-              <img class="places-img places-img-lg" src="./img/marvin-meyer-h8gggTw2CO4-unsplash.jpg" alt="Negroni">
+              <img class="places-img places-img-lg" src="./img/min/marvin-meyer-h8gggTw2CO4-unsplash-min.jpg" alt="Negroni">
               <figcaption class="text-on-img">Negroni</figcaption>
               <a href="" class="place-link"></a>
             </figure>
@@ -110,7 +118,7 @@
 
           <div class="places-card places-card-lg">
             <figure class="places-figure places-figure-lg">
-              <img class="places-img places-img-lg" src="./img/paige-ledford-qhfe60zL8-Q-unsplash.jpg" alt="Old Fashioned">
+              <img class="places-img places-img-lg" src="./img/min/paige-ledford-qhfe60zL8-Q-unsplash-min.jpg" alt="Old Fashioned">
               <figcaption class="text-on-img">Old Fashioned</figcaption>
               <a href="" class="place-link"></a>
             </figure>
@@ -119,7 +127,7 @@
           <!-- smal -->
           <div class="places-card places-card-sm">
             <figure class="places-figure places-figure-sm">
-              <img class="places-img places-img-sm" src="./img/kike-salazar-n-pn10w9vEfF8-unsplash.jpg" alt="Margarita">
+              <img class="places-img places-img-sm" src="./img/min/kike-salazar-n-pn10w9vEfF8-unsplash-min.jpg" alt="Margarita">
               <figcaption class="text-on-img">Margarita</figcaption>
               <a href="" class="place-link"></a>
             </figure>
@@ -127,7 +135,7 @@
 
           <div class="places-card places-card-sm">
             <figure class="places-figure places-figure-sm">
-              <img class="places-img places-img-sm" src="./img/kike-salazar-n-sui13fYo_NM-unsplash.jpg" alt="Espresso Martini">
+              <img class="places-img places-img-sm" src="./img/min/kike-salazar-n-sui13fYo_NM-unsplash-min.jpg" alt="Espresso Martini">
               <figcaption class="text-on-img">Espresso Martini</figcaption>
               <a href="" class="place-link"></a>
             </figure>
@@ -135,7 +143,7 @@
 
       <div class="places-card places-card-sm">
         <figure class="places-figure places-figure-sm">
-          <img class="places-img places-img-sm" src="./img/klara-kulikova-eDonBD749kk-unsplash.jpg" alt="Daiquiri">
+          <img class="places-img places-img-sm" src="./img/min/klara-kulikova-eDonBD749kk-unsplash-min.jpg" alt="Daiquiri">
           <figcaption class="text-on-img">Daiquiri</figcaption>
           <a href="" class="place-link"></a>
         </figure>
@@ -150,10 +158,10 @@
       <div class="wrapper-full">
         <div class="tour">
           <div class="tour-div-img">
-            <img src="./img/usa.jpg" alt="Alcohol in USA" class="tour-img">
+            <img src="./img/min/usa-min.jpg" alt="Alcohol in USA" class="tour-img">
           </div>
         
-        <div class="tour-info">
+        <div class="tour-info tour-div-img-usa">
           <h3 class="tour-h3">Alcohol in USA</h3>
           <p class="tour-p">In the United States, the Twenty-first Amendment to the United States Constitution grants each state and territory the power to regulate intoxicating liquors within their jurisdiction. As such, laws pertaining to the production, sale, distribution, and consumption of alcoholic drinks vary significantly across the country.</p>
           <a href="" class="tour-a">Lear more</a>
@@ -170,7 +178,7 @@
           <a href="" class="tour-a">Lear more</a>
         </div>
         <div class="tour-div-img">
-          <img src="./img/fr.jpg" alt="Alcohol in France" class="tour-img">
+          <img src="./img/min/fr-min.jpg" alt="Alcohol in France" class="tour-img">
         </div>
       
 
@@ -180,7 +188,7 @@
     </div>
 
 
-    <section class="top-section">
+    <section id="info" class="top-section">
       <div class="wrapper-full">
         <h2 class="section-title top-h2">Independent alcohol</h2>
         <div class="top-cards">
@@ -188,7 +196,7 @@
           
           <div class="card">
             <div class="top-img">
-              <img class="t-img" src="./img/jayant-chaudhary-eH5AEEElV1o-unsplash.jpg" alt="">
+              <img class="t-img" src="./img/min/jayant-chaudhary-eH5AEEElV1o-unsplash-min.jpg" alt="">
               <div class="top-statistic-img">
                 <h3 class="top-name">Wiskey</h3>
                 <div class="com">
@@ -207,7 +215,7 @@
 
           <div class="card">
             <div class="top-img">
-              <img class="t-img" src="./img/jeff-siepman-hK9hIPgF3QU-unsplash.jpg" alt="Machu picchu">
+              <img class="t-img" src="./img/min/jeff-siepman-hK9hIPgF3QU-unsplash-min.jpg" alt="Machu picchu">
               <div class="top-statistic-img">
                 <h3 class="top-name">Wine</h3>
                 <div class="com">
@@ -226,9 +234,67 @@
 
           <div class="card">
             <div class="top-img">
-              <img class="t-img" src="./img/teo-do-rio-EUO7L470LXk-unsplash.jpg" alt="Statue Of Lib">
+              <img class="t-img" src="./img/min/teo-do-rio-EUO7L470LXk-unsplash-min.jpg" alt="Statue Of Lib">
               <div class="top-statistic-img">
                 <h3 class="top-name">Beer</h3>
+                <div class="com">
+                  <span class="stat-span">890</span>
+                </div>
+                <div class="lik">
+                  <span class="stat-span">12</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-text">
+              Drinking too much can harm your health.
+            </p>
+            <a href="" class="card-a"> See more</a>
+          </div>
+
+          <!-- second -->
+          <div class="card">
+            <div class="top-img">
+              <img class="t-img" src="./img/min/andrey-ilkevich-lHx0FiuDb7o-unsplash-min.jpg" alt="Statue Of Lib">
+              <div class="top-statistic-img">
+                <h3 class="top-name">Vodka</h3>
+                <div class="com">
+                  <span class="stat-span">890</span>
+                </div>
+                <div class="lik">
+                  <span class="stat-span">12</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-text">
+              Drinking too much can harm your health.
+            </p>
+            <a href="" class="card-a"> See more</a>
+          </div>
+
+          <div class="card">
+            <div class="top-img">
+              <img class="t-img" src="./img/min/jaikishan-patel-xZLDShRVtZw-unsplash-min.jpg" alt="Statue Of Lib">
+              <div class="top-statistic-img">
+                <h3 class="top-name">Rum</h3>
+                <div class="com">
+                  <span class="stat-span">890</span>
+                </div>
+                <div class="lik">
+                  <span class="stat-span">12</span>
+                </div>
+              </div>
+            </div>
+            <p class="card-text">
+              Drinking too much can harm your health.
+            </p>
+            <a href="" class="card-a"> See more</a>
+          </div>
+
+          <div class="card">
+            <div class="top-img">
+              <img class="t-img" src="./img/min/alena-plotnikova-j4qiGqKKviU-unsplash-min.jpg" alt="Statue Of Lib">
+              <div class="top-statistic-img">
+                <h3 class="top-name">Tequila</h3>
                 <div class="com">
                   <span class="stat-span">890</span>
                 </div>
@@ -248,7 +314,7 @@
     </section>
   <!-- video -->
 
-  <div class="videos">
+  <div id="video" class="videos">
     <div class="video-wrapper">
       <div class="video-item"></div>
       <iframe class="video-iframe" src="https://www.youtube.com/embed/ZhAfVbpyqTg?si=J9rKF90Fy0dPRBHD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -313,7 +379,7 @@
 
 
 
-  <script src="./js/script.js"></script>
+  <script src="./min-js/min-script.js"></script>
 
 </body>
 </html>
